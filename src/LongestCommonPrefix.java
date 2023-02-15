@@ -1,19 +1,34 @@
 public class LongestCommonPrefix {
-    //"flower","flow","fight"
+    //"flower","flow","flight"
     public String longestCommonPrefix(String[] strs) {
 
-        String result;
+        String pref = strs[0];
 
         for (int i = 0; i < strs.length; i++) {
+            pref = prefGenerator(pref, strs[i]);
+        }
+        return pref;
+    }
 
-            for (int j = 0; j < strs.length; j++) {
+    public String prefGenerator(String pref, String word) {
+        String result = "";
+        if (pref.equals(word)) {
+            return pref;
+        } else {
+            for (int i = 0; i < word.length() && i < pref.length(); i++) {
+                if (word.charAt(i) == pref.charAt(i)) {
 
-                if (strs[i].charAt(j) == strs[i + 1].charAt(j + 1) ) {
-                   result=strs[i].charAt(j);
+                    result = result + word.charAt(i);
+
+                } else {
                     return result;
                 }
             }
+            return result;
+
         }
-        return result;
+
+
     }
 }
+
