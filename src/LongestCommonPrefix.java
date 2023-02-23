@@ -10,7 +10,7 @@ public class LongestCommonPrefix {
         return pref;
     }
 
-    public String prefGenerator(String pref, String word) {
+    private String prefGenerator(String pref, String word) {
         String result = "";
         if (pref.equals(word)) {
             return pref;
