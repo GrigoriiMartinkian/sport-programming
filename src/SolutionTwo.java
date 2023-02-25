@@ -21,4 +21,4 @@ public class SolutionTwo {
         return false;
     }
 
-}
+}                          
