@@ -13,9 +13,7 @@ public class MissingNumber {
         }
 
         for (int i=0;i < nums.length; i++) {  //[0,1,2,3,4,5,6,7,9]
-            if(nums[0]!=0){
-                return 0;
-            }
+
             if (i != nums[i]) {
                 return i;
             }
@@ -26,7 +24,7 @@ public class MissingNumber {
         }
         // for (int i = 0; i < nums.length; i++) {  //[0,1,2,3,4,5,6,7,9]
         //     int test=0;
-        //            if (i != nums[i]) {
+        //            if (test == nums[i]) {
         //                test++;
         //            }
         //            else{
